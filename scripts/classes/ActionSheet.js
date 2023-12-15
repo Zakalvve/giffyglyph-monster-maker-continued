@@ -18,6 +18,8 @@ import ActionBlueprint from "./ActionBlueprint.js";
 import ActionForge from "./ActionForge.js";
 import Templates from "./Templates.js";
 
+hasProperty = foundry.utils.HasProperty;
+
 export default class ActionSheet extends ItemSheet {
 
 	constructor(...args) {

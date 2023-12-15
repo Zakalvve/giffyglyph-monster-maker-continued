@@ -22,6 +22,7 @@ import ModalSavingThrow from "../modals/ModalSavingThrow.js";
 import MonsterBlueprint from "./MonsterBlueprint.js";
 import Templates from "./Templates.js";
 
+hasProperty = foundry.utils.HasProperty;
 export default class MonsterSheet extends ActorSheet {
 
 	constructor(...args) {

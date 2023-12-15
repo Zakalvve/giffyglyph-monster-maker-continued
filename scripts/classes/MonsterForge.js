@@ -10,6 +10,7 @@ import { GMM_5E_SPEEDS } from "../consts/Gmm5eSpeeds.js";
 import { GMM_5E_SENSES } from "../consts/Gmm5eSenses.js";
 import DerivedAttribute from "./DerivedAttribute.js";
 
+hasProperty = foundry.utils.HasProperty;
 const MonsterForge = (function() {
 
 	function createArtifact(blueprint) {

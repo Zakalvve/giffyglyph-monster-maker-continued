@@ -10,6 +10,8 @@ import { GMM_MONSTER_RANKS } from "../consts/GmmMonsterRanks.js";
 import { GMM_MONSTER_ROLES } from "../consts/GmmMonsterRoles.js";
 import { GMM_5E_XP } from "../consts/Gmm5eXp.js";
 
+hasProperty = foundry.utils.HasProperty;
+
 const MonsterBlueprint = (function() {
 
 	const mappings = [

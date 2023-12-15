@@ -1,6 +1,7 @@
 ![Monster Maker Social Banner](./img/fire-elemental.png)
 
 # Giffyglyph's 5e Monster Maker Continued, by Skyl3lazer
+**THIS IS A TEST BRANCH FOR v12. IT IS NOT STABLE**
 
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 [![Support Giffy on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dgiffyglyph%26type%3Dpatrons&style=flat-square)](https://patreon.com/giffyglyph)
@@ -8,7 +9,8 @@
 [![Discord](https://img.shields.io/badge/contact-me-blue?logo=discord&logoColor=white)](https://discord.com/channels/@skyl3lazer)
 
 
-This is a continuation of the original module by Giffyglyph, updated to be compatable Foundry v10/11 and D&D 2.2.x.
+
+This is a continuation of the original module by Giffyglyph, updated to be compatable Foundry v10+ and D&D 2.2.x.
 (Also check out my [v3 updated Webapp!](https://giffyglyphmonstermakerv3.azurewebsites.net/))
 
 **NOTE:** There are still signposting issues around! Not all tooltips, etc, have been updated. Many of the entries in the compendiums are built for v2 as well, so double check your monsters if you use compendium elements.
@@ -41,7 +43,7 @@ Want to build new monsters for your [Foundry VTT](https://foundryvtt.com/) D&D 5
 
 You can install this Foundry module by copying a manifest URL into your Foundry setup:
 
-
+* **v3 Foundry12 Test Branch (Unstable):** https://raw.githubusercontent.com/Skyl3lazer/giffyglyph-monster-maker-continued/v12/module.json
 * **v3 RC 0.11.x (Main Release):** https://raw.githubusercontent.com/Skyl3lazer/giffyglyph-monster-maker-continued/master/module.json	
   * This is probably what you want
 * **v3 Dev 0.12.x (May be unstable):** https://raw.githubusercontent.com/Skyl3lazer/giffyglyph-monster-maker-continued/dev/module.json
