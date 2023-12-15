@@ -1,6 +1,10 @@
 import { GMM_ACTION_BLUEPRINT } from "../consts/GmmActionBlueprint.js";
 import Shortcoder from './Shortcoder.js';
-hasProperty = foundry.utils.HasProperty;
+
+const hasProperty = foundry.utils.hasProperty;
+const setProperty = foundry.utils.setProperty;
+const getProperty = foundry.utils.getProperty;
+
 const ActionBlueprint = (function () {
 
     const mappings = [

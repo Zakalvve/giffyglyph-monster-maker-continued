@@ -10,8 +10,9 @@ import { GMM_5E_SPEEDS } from "../consts/Gmm5eSpeeds.js";
 import { GMM_5E_SENSES } from "../consts/Gmm5eSenses.js";
 import DerivedAttribute from "./DerivedAttribute.js";
 
-hasProperty = foundry.utils.HasProperty;
-const MonsterForge = (function() {
+const hasProperty = foundry.utils.hasProperty;
+const getProperty = foundry.utils.getProperty;
+const MonsterForge = (function () {
 
 	function createArtifact(blueprint) {
 		const derivedAttributes = MonsterHelpers.getDerivedAttributes(
@@ -688,8 +689,8 @@ const MonsterForge = (function() {
 		});
 		
 		// Look up the number of slots per level from the progression table
-		const levels = Math.clamped(spellLevel ? spellLevel : progression.slot, 0, 20);
-		const pactLevel = Math.clamped(slotModifiers.pact.level ? slotModifiers.pact.level : progression.pact, 0, 20);
+		const levels = Math.clamp(spellLevel ? spellLevel : progression.slot, 0, 20);
+		const pactLevel = Math.clamp(slotModifiers.pact.level ? slotModifiers.pact.level : progression.pact, 0, 20);
 		const rawSlots = CONFIG.DND5E.SPELL_SLOT_TABLE[levels - 1] || [];
 
 		const slots = {};

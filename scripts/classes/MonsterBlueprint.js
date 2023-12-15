@@ -10,10 +10,11 @@ import { GMM_MONSTER_RANKS } from "../consts/GmmMonsterRanks.js";
 import { GMM_MONSTER_ROLES } from "../consts/GmmMonsterRoles.js";
 import { GMM_5E_XP } from "../consts/Gmm5eXp.js";
 
-hasProperty = foundry.utils.HasProperty;
+const hasProperty = foundry.utils.hasProperty;
+const setProperty = foundry.utils.setProperty;
+const getProperty = foundry.utils.getProperty;
 
 const MonsterBlueprint = (function() {
-
 	const mappings = [
 		{ from: "biography.text", to: "system.details.biography.value" },
 		{ from: "condition_immunities.other", to: "system.traits.ci.custom" },

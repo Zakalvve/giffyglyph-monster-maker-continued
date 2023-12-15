@@ -18,10 +18,12 @@ import ActionBlueprint from "./ActionBlueprint.js";
 import ActionForge from "./ActionForge.js";
 import Templates from "./Templates.js";
 
-hasProperty = foundry.utils.HasProperty;
+const hasProperty = foundry.utils.hasProperty;
+const setProperty = foundry.utils.setProperty;
+const getProperty = foundry.utils.getProperty;
 
 export default class ActionSheet extends ItemSheet {
-
+	
 	constructor(...args) {
 		super(...args);
 
@@ -29,7 +31,7 @@ export default class ActionSheet extends ItemSheet {
 	}
 
 	static get defaultOptions() {
-		return mergeObject(
+		return foundry.utils.mergeObject(
 			super.defaultOptions,
 			{
 				classes: ["gmm-window window--action"],
@@ -176,7 +178,7 @@ export default class ActionSheet extends ItemSheet {
 		if (event && event.currentTarget) {
 			this._gui.updateFrom(event.currentTarget.closest(".gmm-window"));
 		}
-		let formData = expandObject(form);
+		  let formData = foundry.utils.expandObject(form);
 
 		//Messy but new validation makes this weird with dropdowns
 		if(formData.gmm.blueprint.duration.value === null)

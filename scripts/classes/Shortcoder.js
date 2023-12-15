@@ -1,6 +1,8 @@
-hasProperty = foundry.utils.HasProperty;
-const Shortcoder = (function () {
+const hasProperty = foundry.utils.hasProperty;
+const getProperty = foundry.utils.getProperty;
 
+const Shortcoder = (function () {
+	
 	const SHORTCODES = [
 		{ code: "level", data: "level.value" },
 		{ code: "attackBonus", data: "attack_bonus.value" },

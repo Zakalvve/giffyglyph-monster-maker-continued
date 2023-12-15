@@ -505,7 +505,7 @@ const GmmItem = (function () {
         }
 
         // Call the roll helper utility
-        return damageRoll(mergeObject(rollConfig, options));
+        return damageRoll(foundry.utils.mergeObject(rollConfig, options));
     }
     function _getSortingCategory() {
         if (this.getSheetId() == `${GMM_MODULE_TITLE}.ActionSheet`) {

@@ -22,7 +22,10 @@ import ModalSavingThrow from "../modals/ModalSavingThrow.js";
 import MonsterBlueprint from "./MonsterBlueprint.js";
 import Templates from "./Templates.js";
 
-hasProperty = foundry.utils.HasProperty;
+const hasProperty = foundry.utils.hasProperty;
+const setProperty = foundry.utils.setProperty;
+const getProperty = foundry.utils.getProperty;
+
 export default class MonsterSheet extends ActorSheet {
 
 	constructor(...args) {
@@ -32,7 +35,7 @@ export default class MonsterSheet extends ActorSheet {
 	}
 
 	static get defaultOptions() {
-		return mergeObject(
+		return foundry.utils.mergeObject(
 			super.defaultOptions,
 			{
 				classes: ["gmm-window window--monster"],
@@ -317,7 +320,7 @@ export default class MonsterSheet extends ActorSheet {
 			this._gui.updateFrom(event.currentTarget.closest(".gmm-window"));
 		}
 
-		let formData = expandObject(form);
+		let formData = foundry.utils.expandObject(form);
 		if (hasProperty(formData, "gmm.blueprint")) {
 			setProperty(formData, "flags.gmm.blueprint", {
 				vid: 1,
