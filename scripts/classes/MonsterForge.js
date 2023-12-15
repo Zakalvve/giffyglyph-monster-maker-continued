@@ -689,8 +689,9 @@ const MonsterForge = (function () {
 		});
 		
 		// Look up the number of slots per level from the progression table
-		const levels = Math.clamp(spellLevel ? spellLevel : progression.slot, 0, 20);
-		const pactLevel = Math.clamp(slotModifiers.pact.level ? slotModifiers.pact.level : progression.pact, 0, 20);
+		//TODO v14 - clamped becomes clamp, but this breaks v10
+		const levels = Math.clamped(spellLevel ? spellLevel : progression.slot, 0, 20);
+		const pactLevel = Math.clamped(slotModifiers.pact.level ? slotModifiers.pact.level : progression.pact, 0, 20);
 		const rawSlots = CONFIG.DND5E.SPELL_SLOT_TABLE[levels - 1] || [];
 
 		const slots = {};
