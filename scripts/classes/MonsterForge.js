@@ -29,6 +29,7 @@ const MonsterForge = (function () {
 		const monsterInventoryCapacity = _getInventoryCapacity(monsterAbilityModifiers, blueprint.data);
 		const monsterClasses = blueprint.data.traits.items.filter((x) => x.class );
 		const showLegendaryActions = blueprint.data.legendary_actions.always_show || blueprint.data.legendary_actions.maximum > 0 || blueprint.data.legendary_actions.items.length > 0;
+		const showLegendaryResistances = blueprint.data.legendary_resistances.always_show || blueprint.data.legendary_resistances.maximum > 0;
 		const ignoreItemRequirements = blueprint.data.display.ignore_item_requirements;
 
 		return {
@@ -60,7 +61,7 @@ const MonsterForge = (function () {
 				level: _parseLevel(derivedAttributes.level),
 				name: _parseName(blueprint.data.description.name),
 				paragon_actions: _parseParagonActions(derivedAttributes.rank, blueprint.data.paragon_actions, showLegendaryActions),
-				paragon_defenses: _parseParagonDefenses(derivedAttributes.rank, blueprint.data.paragon_defenses, showLegendaryActions, derivedAttributes.level),
+				paragon_defenses: _parseParagonDefenses(derivedAttributes.rank, blueprint.data.paragon_defenses, showLegendaryResistances, derivedAttributes.level),
 				passive_perception: _parsePassivePerception(monsterSkills, monsterAbilityModifiers, derivedAttributes.rank, derivedAttributes.role, blueprint.data.passive_perception),
 				phase: _parsePhase(derivedAttributes.rank),
 				proficiency_bonus: monsterProficiency,
@@ -489,7 +490,7 @@ const MonsterForge = (function () {
 		};
 	}
 
-	function _parseParagonDefenses(rank, paragonDefenses, showLegendaryActions, level) {
+	function _parseParagonDefenses(rank, paragonDefenses, showLegendaryResistances, level) {
 		//Retrofit for earlier bug
 		if (paragonDefenses.maximum === null)
 			paragonDefenses.maximum = {
@@ -508,7 +509,7 @@ const MonsterForge = (function () {
 		mx.ceil();
 
 		return {
-			visible: paragonDefenses.always_show || (!showLegendaryActions && (mx.value > 0)),
+			visible: paragonDefenses.always_show || (!showLegendaryResistances && (mx.value > 0)),
 			current: paragonDefenses.current,
 			maximum: mx,
 			cost: (level * 2)
