@@ -11,10 +11,11 @@
 
 * v12 Foundry Deprecation Fixes
 * dnd5e 3.0 compatability
+* Fixes to swarm size
 
 ## v0.12.0.2 (latest)
 
-* Shortcoder warning supression for roll commands.
+* Shortcoder warning supression for roll commands
 * Fixes for paragon defense modifications and display
 
 ## v0.11.0.3
